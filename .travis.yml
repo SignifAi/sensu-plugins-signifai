@@ -1,0 +1,33 @@
+language: ruby
+cache:
+- bundler
+install:
+- bundle install
+rvm:
+- 2.0
+- 2.1
+- 2.2
+- 2.3
+notifications:
+  email:
+    recipients:
+    - sensu-plugin@sensu-plugins.io
+    on_success: change
+    on_failure: always
+script:
+- bundle exec rake default
+- gem build sensu-plugins-signifai.gemspec
+- gem install sensu-plugins-signifai-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: E906GFnaEQtLBxVsFt5rIinzVEb3ga8V5rPcxzOkGVWca17ag3pJ9rBXpiDd9zzkAF61zSfW7MbUu9KrddihSddMXM8I1Vt35xGw6pZTNqtzGeZA7egIdxks7XxszibXtZb0pOvBOAg2eGYQARzzJkvhgFPu/pVn5OOj8Oed9zU=
+  gem: sensu-plugins-signifai
+  on:
+    tags: true
+    all_branches: true
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    rvm: 2.3
+    repo: signifai/sensu-plugins-signifai
