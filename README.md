@@ -58,6 +58,7 @@ Write out a file, /etc/sensu/conf.d/signifai.json , that looks like this:
   "handlers": {
     "signifai": {
       "type": "pipe",
+      "filter": "state_change_only",
       "command": "/opt/sensu/embedded/bin/handler-signifai.rb"
     }
   },
@@ -66,6 +67,14 @@ Write out a file, /etc/sensu/conf.d/signifai.json , that looks like this:
   },
   "sensu_plugin": {
     "disable_deprecated_filtering": true
+  },
+  "filters": {
+    "state_change_only": {
+      "negate": false,
+      "attributes": {
+        "occurrences": "eval: value == 1 || ':::action:::' == 'resolve'"
+      }
+    }
   }
 }
 ```
