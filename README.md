@@ -6,44 +6,25 @@ Installation
 
 Assuming you have [installed Sensu for your platform]
 (https://sensuapp.org/docs/latest/installation/), you should be able
-to `git clone git@github.com:SignifAi/sensu-plugin-signifai`. Once
-you've pulled the repository, if you elect to use the "embedded" Ruby
-that comes with Sensu, you may want to (at least temporarily) add their
-Ruby to your PATH:
+to download our gem at http://rpm.signifai.io/sensu/sensu-plugins-signifai-1.0.0.gem .
+If you elect to use the "embedded" Ruby  that comes with Sensu, you may 
+want to (at least temporarily) add their Ruby to your PATH:
 
 ```
 export EMBEDDED_RUBY="true"
 export PATH="/opt/sensu/embedded/bin:$PATH"
 ```
 
-Whether you've done this or not, you will need to install dependencies (note
-that you will need the `bundler` gem if you are using your system's native
-Ruby):
+Next, you'll want to download the gem at http://rpm.signifai.io/sensu/sensu-plugins-signifai-1.0.0.gem .
+
+Once the gem is downloaded to your local directory, simply run:
 
 ```
-bundle install
+sudo -E gem install ./sensu-plugins-signifai-1.0.0.gem
 ```
 
-And it's always a safe bet to run tests:
-
-```
-bundle exec rake default
-```
-
-If the tests are okay (or you're sure you don't require them to run), you can
-build the gem:
-
-```
-gem build sensu-plugin-signifai.gemspec
-```
-
-And on success, you can install it:
-
-```
-sudo -E gem install ./sensu-plugin-signifai-1.0.0.gem
-```
-
-`which handler-signifai.rb` should give you a valid path now. 
+Verify that `which handler-signifai.rb` gives you a valid path; if
+so, the plugin is installed and ready to use!
 
 Configuration
 =============
@@ -104,3 +85,33 @@ example:
 You can use either the `handler` attribute with just the string `"signifai"`
 or you can use `handlers` with `"signifai"` alongside any other handlers you
 may need. 
+
+Building (for developers)
+=========================
+
+You will need to install dependencies (note that you will need the `bundler` 
+gem if you are using your system's native Ruby):
+
+```
+bundle install
+```
+
+And it's always a safe bet to run tests:
+
+```
+bundle exec rake default
+```
+
+If the tests are okay, you can build your gem like so:
+
+```
+gem build sensu-plugin-signifai.gemspec
+```
+
+If you like, you can then install your newly-built gem
+using the instructions in the Installation section.
+
+For more information on the tests/procedures the sensu-plugins
+authors use when determining if a plugin is ready for release,
+check http://sensu-plugins.io/docs/testing.html -- it should be
+helpful when suggesting changes.
