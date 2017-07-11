@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.description            = 'This plugin provides a Sensu handler for SignifAi'
   s.email                  = [
     '<sensu-users@googlegroups.com>',
+    'support@signifai.io',
     '<zcarlson@signifai.io>'
   ]
   s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
