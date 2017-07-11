@@ -1,13 +1,15 @@
 language: ruby
 cache:
 - bundler
+before_install: gem install bundler -v 1.15
 install:
 - bundle install
 rvm:
 - 2.0
 - 2.1
 - 2.2
-- 2.3
+- 2.3.0
+- 2.4.1
 notifications:
   email:
     recipients:
@@ -21,13 +23,13 @@ script:
 deploy:
   provider: rubygems
   api_key:
-    secure: E906GFnaEQtLBxVsFt5rIinzVEb3ga8V5rPcxzOkGVWca17ag3pJ9rBXpiDd9zzkAF61zSfW7MbUu9KrddihSddMXM8I1Vt35xGw6pZTNqtzGeZA7egIdxks7XxszibXtZb0pOvBOAg2eGYQARzzJkvhgFPu/pVn5OOj8Oed9zU=
+    secure: "<encrypted rubygems deploy key>"
   gem: sensu-plugins-signifai
   on:
     tags: true
     all_branches: true
-    rvm: 2.0
-    rvm: 2.1
-    rvm: 2.2
-    rvm: 2.3
-    repo: signifai/sensu-plugins-signifai
+    rvm: 2.4.1
+    repo: sensu-plugins/sensu-plugins-signifai
+env:
+  global:
+    secure: osOjYI/365ao95qlBo+eBNlbT3l3smKSvI89TQ46or9YXS9mkTBgyF4/f4g8sWQfxfgile4SCOReT5rasMf70hc9OJI7vO/yqQY47ZP1jwL0dI5FYzZSNT0LMP4g3QJ6DyGiiWWq77syNoYLGTX/ggwMuP1FADB5cgWjs8Kpy+TT5g8Az3P4lcI9sgz/okYujGMA1mJstBkGu40Lnfz3JhksI7jSSE3cfA9MTnWicpQE2yRxM66cqYpzHrFga9asDJRpHNo1YU7cPmp4h9EITCuuqXxsJccw0E99Qxvsig2NM4Benm+QIvJfxDNY1TTGxZx0RVqEUCFUDsvWHNlo+uuBPAU/7AAuvMH8BgwHZNWfvixXtMtt7x4fxMSfX6sKkbnHeMa4jl/sTEBcyWJKb3sz48HzGuIGIKI6I+5FnQ+10X3gmf8F3E1oeA81ZaNeySsysaYuiRoUB33zZBIWBLOkjkBDCnQFlHZb7sJU+HVPk4e/56c2dm/MDr2/bsbOuJOPG9BtFD8SUvWkSLx0pIi5uShsbhC9LwLG5L/fnyLtbrwluPMnyltxqeirBuO92/7UOyC8XJ8q2ummD/2R4POes5NV+dMOtwvx0su/raNWfXw+mi4vC48OapAHTKQFlwLd+9PaZIwgcTdH40QjSMiZuXx81l0AqtYelVzZM1g=
