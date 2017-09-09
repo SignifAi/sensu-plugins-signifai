@@ -66,7 +66,15 @@ class SignifaiHandler < Sensu::Handler
       timestamp: time,
       event_description: @event['check']['output'],
       value: PRIORITIES[priority_index],
-      attributes: { state: state }
+      attributes: {
+        state: state,
+        check_type: @event['check']['type'],
+        check_name: @event['check']['name'],
+        check_command: @event['check']['command'],
+        check_subscribers: @event['check']['subscribers'].nil? ? nil : @event['check']['subscribers'].join(','),
+        check_interval: @event['check']['interval'],
+        check_handlers: @event['check']['handlers'].nil? ? @event['check']['handler'] : @event['check']['handlers'].join(',')
+      }
     }
 
     JSON.dump(incident)
