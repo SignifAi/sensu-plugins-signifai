@@ -50,7 +50,15 @@ describe 'Handlers' do
         timestamp: 1,
         event_description: nil,
         value: 'critical',
-        attributes: { state: 'alarm' }
+        attributes: {
+          state: 'alarm',
+          check_type: nil,
+          check_name: nil,
+          check_command: nil,
+          check_subscribers: nil,
+          check_interval: nil,
+          check_handlers: nil
+        }
       }
       expected_incident = JSON.dump(expected_incident)
       expect(@handler.incident_with_state('alarm', 1)).to eq(expected_incident)
@@ -66,7 +74,15 @@ describe 'Handlers' do
         timestamp: 1,
         event_description: nil,
         value: 'critical',
-        attributes: { state: 'alarm' }
+        attributes: {
+          state: 'alarm',
+          check_type: nil,
+          check_name: nil,
+          check_command: nil,
+          check_subscribers: nil,
+          check_interval: nil,
+          check_handlers: nil
+        }
       }
       expected_incident = JSON.dump(expected_incident)
 
@@ -90,7 +106,15 @@ describe 'Handlers' do
         timestamp: 1,
         event_description: nil,
         value: 'critical',
-        attributes: { state: 'alarm' }
+        attributes: {
+          state: 'alarm',
+          check_type: nil,
+          check_name: nil,
+          check_command: nil,
+          check_subscribers: nil,
+          check_interval: nil,
+          check_handlers: nil
+        }
       }
       expected_incident = JSON.dump(expected_incident)
 
@@ -119,7 +143,15 @@ describe 'Handlers' do
         timestamp: 1,
         event_description: nil,
         value: 'critical',
-        attributes: { state: 'ok' }
+        attributes: {
+          state: 'ok',
+          check_type: nil,
+          check_name: nil,
+          check_command: nil,
+          check_subscribers: nil,
+          check_interval: nil,
+          check_handlers: nil
+        }
       }
       expected_incident = JSON.dump(expected_incident)
 
