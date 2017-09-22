@@ -5,9 +5,8 @@ Installation
 ============
 
 Assuming you have [installed Sensu for your platform]
-(https://sensuapp.org/docs/latest/installation/), you should be able
-to download our gem at http://rpm.signifai.io/sensu/sensu-plugins-signifai-1.0.0.gem .
-If you elect to use the "embedded" Ruby  that comes with Sensu, you may 
+(https://sensuapp.org/docs/latest/installation/), and if you elect 
+to use the "embedded" Ruby  that comes with Sensu, you may 
 want to (at least temporarily) add their Ruby to your PATH:
 
 ```
@@ -15,9 +14,7 @@ export EMBEDDED_RUBY="true"
 export PATH="/opt/sensu/embedded/bin:$PATH"
 ```
 
-Next, you'll want to download the gem at http://rpm.signifai.io/sensu/sensu-plugins-signifai-1.0.0.gem .
-
-Once the gem is downloaded to your local directory, simply run:
+Then, simply run:
 
 ```
 sudo -E gem install sensu-plugins-signifai
