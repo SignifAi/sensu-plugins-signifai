@@ -20,7 +20,7 @@ Next, you'll want to download the gem at http://rpm.signifai.io/sensu/sensu-plug
 Once the gem is downloaded to your local directory, simply run:
 
 ```
-sudo -E gem install ./sensu-plugins-signifai-1.0.0.gem
+sudo -E gem install sensu-plugins-signifai
 ```
 
 Verify that `which handler-signifai.rb` gives you a valid path; if
