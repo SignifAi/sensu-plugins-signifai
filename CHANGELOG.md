@@ -16,6 +16,11 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Fixed
 - Travis config following new minimum Ruby version requirement (@zcarlson-signifai)
 
+## [1.1.2/1.1.3] 2017-09-21
+### Added
+- A bunch more information about the check and its results sent to signifai (@zcarlson-signifai)
+
+
 ## [1.1.1] 2017-07-11
 ### Fixed
 - fix travis config (@majormoses)
