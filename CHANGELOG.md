@@ -5,6 +5,17 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## Unreleased
 
+## [1.1.4] 2019-01-09
+### Changed
+- Updated dependencies and reconciled necessary changes (@zcarlson-signifai)
+    - Bundler 2.0
+    - Rubocop 0.50.0
+    - sensu-plugins >= 1.2 and < 4.0
+- Minimum Ruby version is now 2.3.0, in-line with sensu-plugins-skel (@zcarlson-signifai)
+
+### Fixed
+- Travis config following new minimum Ruby version requirement (@zcarlson-signifai)
+
 ## [1.1.1] 2017-07-11
 ### Fixed
 - fix travis config (@majormoses)
