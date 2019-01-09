@@ -1,4 +1,9 @@
 
+Metrics/BlockLength:
+  Exclude:
+    - test/**/*
+    - sensu-plugins-signifai.gemspec
+
 MethodLength:
   Max: 200
 
