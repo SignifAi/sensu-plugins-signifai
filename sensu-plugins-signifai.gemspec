@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
     '<zcarlson@signifai.io>'
   ]
   s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
-  s.files                  = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
+  s.files                  = Dir.glob('{bin,lib}/**/*') + %w[LICENSE README.md CHANGELOG.md]
   s.homepage               = 'https://github.com/signifai/sensu-plugins-signifai'
   s.license                = 'MIT'
   s.metadata               = { 'maintainer'         => 'sensu-plugin',
