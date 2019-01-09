@@ -5,8 +5,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## Unreleased
 
-## [1.1.4] 2019-01-09
-### Changed
+### Breaking Changes
 - Updated dependencies and reconciled necessary changes (@zcarlson-signifai)
     - Bundler 2.0
     - Rubocop 0.50.0
