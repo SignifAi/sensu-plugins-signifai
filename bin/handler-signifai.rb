@@ -22,7 +22,7 @@ require 'net/http'
 # Signifai
 #
 
-PRIORITIES = %w(low medium critical critical).freeze
+PRIORITIES = %w[low medium critical critical].freeze
 COLLECTORS_URI = URI('https://collectors.signifai.io/v1/incidents')
 
 class SignifaiHandler < Sensu::Handler
