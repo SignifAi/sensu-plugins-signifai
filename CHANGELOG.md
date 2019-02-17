@@ -1,10 +1,11 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
+This CHANGELOG follows the format located [here](https://github.com/sensu-plugins/community/blob/master/HOW_WE_CHANGELOG.md)
 
 ## Unreleased
 
+## [2.0.0] - 2019-02-17
 ### Breaking Changes
 - Updated dependencies and reconciled necessary changes (@zcarlson-signifai)
     - Bundler 2.0
@@ -15,10 +16,12 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Fixed
 - Travis config following new minimum Ruby version requirement (@zcarlson-signifai)
 
-## [1.1.2/1.1.3] 2017-09-21
+### Changed
+- misc changes to changelog and pr template (@majormoses)
+
+## [1.1.3] 2017-09-21
 ### Added
 - A bunch more information about the check and its results sent to signifai (@zcarlson-signifai)
-
 
 ## [1.1.1] 2017-07-11
 ### Fixed
@@ -43,6 +46,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - became an official sensu community gem
 
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-signifai/compare/1.1.1...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-signifai/compare/1.1.3...HEAD
+[2.0.0]: https://github.com/sensu-plugins/sensu-plugins-signifai/compare/1.1.3...2.0.0
+[1.1.3]: https://github.com/sensu-plugins/sensu-plugins-signifai/compare/1.1.1...1.1.3
 [1.1.1]: https://github.com/sensu-plugins/sensu-plugins-signifai/compare/1.0.0...1.1.0
 [1.1.0]: https://github.com/sensu-plugins/sensu-plugins-signifai/compare/1.0.0...1.1.0
